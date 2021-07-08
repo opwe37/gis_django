@@ -2,8 +2,20 @@
 
 {% block content %}
 
-    <div style="background-color: aqua; height: 20rem; margin: 2rem; border-radius: 1rem">
+    <div style="text-align: center; margin: 2rem">
         <h1>TEST</h1>
+
+        <form action="/accounts/hello_world/" method="post">
+            {% csrf_token %}
+            <div class="input-group mb-3">
+              <input name="hello_world_input" type="text" class="form-control" />
+              <button class="btn btn-outline-secondary">제출</button>
+            </div>
+{#            <input name="hello_world_input" type="text" />#}
+{#            <button>제출</button>#}
+        </form>
+
+        <h3>{{ hello_world_output.text }}</h3>
     </div>
 
 {% endblock %}
