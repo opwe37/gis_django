@@ -22,3 +22,20 @@
 .txt_center {
     text-align: center;
 }
+
+a, li {
+    all: unset;
+}
+
+.mw-500 {
+    max-width: 500px;
+    margin: 1rem 1.5rem;
+}
+
+.click {
+    cursor: pointer;
+    color: black;
+}
+.click:hover {
+    color: black;
+}
