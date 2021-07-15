@@ -23,8 +23,12 @@
     text-align: center;
 }
 
-a, li {
+a {
     all: unset;
+}
+
+li {
+    text-align: left;
 }
 
 .mw-500 {
