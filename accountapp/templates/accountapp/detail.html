@@ -11,7 +11,8 @@
         </div>
 
         <div>
-            <p><a href="{% url 'accountapp:update' pk=user.id %}">Update Info</a></p>
+            <a href="{% url 'accountapp:update' pk=user.id %}">Update Info</a>
+            <a href="{% url 'accountapp:delete' pk=user.id %}" style="margin-left: 1rem">Quit</a>
         </div>
     </div>
 
