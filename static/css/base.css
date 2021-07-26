@@ -43,3 +43,14 @@ li {
 .click:hover {
     color: black;
 }
+
+.thumbnail_img_large {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 20rem;
+    object-fit: cover;
+}
+
+.NNS_B {
+    font-family: 'NanumSquareB';
+}
