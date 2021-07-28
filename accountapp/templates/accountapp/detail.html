@@ -8,7 +8,12 @@
                 <img src="{{ target_user.profile.image.url }}"
                      alt="profile image"
                      class="thumbnail_img_large m-4">
-                <h4 class="NNS_B">{{ target_user.profile.nickname }}</h4>
+                <h4 class="NNS_B">
+                    {{ target_user.profile.nickname }}
+                    <a href="{% url 'profileapp:update' pk=target_user.profile.pk %}">
+                        edit
+                    </a>
+                </h4>
                 <h5>{{ target.user.profile.message }}</h5>
             {% else %}
                 <h4><a href="{% url 'profileapp:create' %}">Create Profile</a></h4>
