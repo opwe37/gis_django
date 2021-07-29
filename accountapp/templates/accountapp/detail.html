@@ -23,14 +23,11 @@
                 <h4><a href="{% url 'profileapp:create' %}">Create Profile</a></h4>
             {% endif %}
         </div>
-        <div>
-            {{ target_user.date_joined }}
-        </div>
 
         {% if user == target_user %}
         <div>
-            <a href="{% url 'accountapp:update' pk=user.id %}">Update Info</a>
-            <a href="{% url 'accountapp:delete' pk=user.id %}" style="margin-left: 1rem">Quit</a>
+            <a href="{% url 'accountapp:update' pk=user.id %}" class="material-icons round-button">settings</a>
+            <a href="{% url 'accountapp:delete' pk=user.id %}" class="material-icons round-button" >close</a>
         </div>
         {% endif %}
     </div>
