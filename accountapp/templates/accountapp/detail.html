@@ -8,15 +8,16 @@
                 <img src="{{ target_user.profile.image.url }}"
                      alt="profile image"
                      class="thumbnail_img_large m-4">
-                <h4 class="NNS_B">
+                <h2 class="NNS_B">
                     {{ target_user.profile.nickname }}
 
                     {% if user == target_user %}
-                    <a href="{% url 'profileapp:update' pk=target_user.profile.pk %}">
-                        edit
-                    </a>
+                        <a href="{% url 'profileapp:update' pk=target_user.profile.pk %}"
+                           class = "material-icons round-button">
+                            edit
+                        </a>
                     {% endif %}
-                </h4>
+                </h2>
                 <h5>{{ target.user.profile.message }}</h5>
             {% else %}
                 <h4><a href="{% url 'profileapp:create' %}">Create Profile</a></h4>
