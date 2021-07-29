@@ -13,12 +13,13 @@
 
                     {% if user == target_user %}
                         <a href="{% url 'profileapp:update' pk=target_user.profile.pk %}"
-                           class = "material-icons round-button">
+                           class = "material-icons round-button"
+                           title="프로필 수정">
                             edit
                         </a>
                     {% endif %}
                 </h2>
-                <h5>{{ target.user.profile.message }}</h5>
+                <h5>{{ target_user.profile.message }}</h5>
             {% else %}
                 <h4><a href="{% url 'profileapp:create' %}">Create Profile</a></h4>
             {% endif %}
@@ -26,8 +27,16 @@
 
         {% if user == target_user %}
         <div>
-            <a href="{% url 'accountapp:update' pk=user.id %}" class="material-icons round-button">settings</a>
-            <a href="{% url 'accountapp:delete' pk=user.id %}" class="material-icons round-button" >close</a>
+            <a href="{% url 'accountapp:update' pk=user.id %}"
+               class="material-icons round-button"
+               title="회원정보 수정">
+                settings
+            </a>
+            <a href="{% url 'accountapp:delete' pk=user.id %}"
+               class="material-icons round-button"
+               title="회원탈퇴">
+                close
+            </a>
         </div>
         {% endif %}
     </div>
