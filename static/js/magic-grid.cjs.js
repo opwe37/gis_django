@@ -182,8 +182,8 @@ MagicGrid.prototype.nextCol = function nextCol (cols, i) {
  */
 MagicGrid.prototype.positionItems = function positionItems () {
   var ref = this.setup();
-    var cols = ref.cols;
-    var wSpace = ref.wSpace;
+  var cols = ref.cols;
+  var wSpace = ref.wSpace;
   var maxHeight = 0;
   var colWidth = this.colWidth();
 
@@ -285,3 +285,8 @@ let magicGrid = new MagicGrid({
 });
 
 magicGrid.listen();
+
+var imgs = document.getElementsByTagName('img');
+for (let img of imgs) {
+    img.addEventListener('load', () => magicGrid.positionItems());
+}
