@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="container d-flex">
+        <div>
+            <img src="{{ target_article.image.url }}" alt="">
+        </div>
+        <div>
+            <div>
+                <h1>{{ target_article.title }}</h1>
+                <h4>{{ target_article.writer.profile.nickname }}</h4>
+                <p>{{ target_article.created_at }}</p>
+            </div>
+            <div>
+                {{ target_article.content }}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
