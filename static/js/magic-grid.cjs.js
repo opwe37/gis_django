@@ -288,5 +288,5 @@ magicGrid.listen();
 
 var imgs = document.getElementsByTagName('img');
 for (let img of imgs) {
-    img.addEventListener('load', () => magicGrid.positionItems());
+    img.addEventListener('load', () => magicGrid.positionItems(), false);
 }
