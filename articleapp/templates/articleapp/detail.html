@@ -3,21 +3,30 @@
 
 {% block content %}
 
-    <div class="container text-center">
-        <div>
-            <img src="{{ target_article.image.url }}" alt="" class="rounded">
+    <div class="container">
+        <div class="my-3 text-center">
+            <img src="{{ target_article.image.url }}" alt=""
+                 class="article-image">
         </div>
-        <div>
-            <div>
-                <h1>{{ target_article.title }}</h1>
-                <h4>{{ target_article.writer.profile.nickname }}</h4>
-                <p>{{ target_article.created_at }}</p>
-            </div>
-            <div>
-                {{ target_article.content }}
-
-                {% if user == target_article.writer %}
+        <div class="m-auto" style="width: 70%">
+            <div class="my-5">
+                <h1 class="NNS_B">{{ target_article.title }}</h1>
                 <div>
+                    <div class="d-flex">
+                        <img class="thumbnail_img_small" src="{{ target_article.writer.profile.image.url }}" alt="">
+                        <h4 class="mb-0 ms-2 lh-base">
+                            {{ target_article.writer.profile.nickname }}
+                        </h4>
+                    </div>
+                    <p>{{ target_article.created_at }}</p>
+                </div>
+            </div>
+            <div class="article-content m-2">
+                {{ target_article.content }}
+            </div>
+
+            {% if user == target_article.writer %}
+                <div class="my-3 text-center">
                     <a href = "{% url 'articleapp:update' pk=target_article.pk %}"
                        class = "btn btn-success rounded-pill px-5">
                         Update
@@ -29,7 +38,11 @@
                     </a>
                 </div>
                 {% endif %}
-            </div>
+        </div>
+
+        <hr/>
+        <div>
+            {# 댓글 #}
         </div>
     </div>
 
