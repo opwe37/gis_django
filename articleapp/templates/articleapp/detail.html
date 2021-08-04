@@ -3,7 +3,7 @@
 
 {% block content %}
 
-    <div class="container d-flex">
+    <div class="container center">
         <div>
             <img src="{{ target_article.image.url }}" alt="">
         </div>
@@ -15,6 +15,13 @@
             </div>
             <div>
                 {{ target_article.content }}
+
+                <div>
+                    <a href = "{% url 'articleapp:update' pk=target_article.pk %}"
+                       class = "btn btn-success rounded-pill px-5">
+                        Update
+                    </a>
+                </div>
             </div>
         </div>
     </div>
