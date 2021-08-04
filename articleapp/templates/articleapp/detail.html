@@ -3,9 +3,9 @@
 
 {% block content %}
 
-    <div class="container center">
+    <div class="container text-center">
         <div>
-            <img src="{{ target_article.image.url }}" alt="">
+            <img src="{{ target_article.image.url }}" alt="" class="rounded">
         </div>
         <div>
             <div>
@@ -20,6 +20,11 @@
                     <a href = "{% url 'articleapp:update' pk=target_article.pk %}"
                        class = "btn btn-success rounded-pill px-5">
                         Update
+                    </a>
+
+                    <a href = "{% url 'articleapp:delete' pk=target_article.pk %}"
+                       class = "btn btn-danger rounded-pill px-5">
+                        Delete
                     </a>
                 </div>
             </div>
