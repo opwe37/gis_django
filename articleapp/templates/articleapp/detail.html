@@ -43,6 +43,19 @@
         <hr/>
         <div class="text-center my-4">
             {# 댓글 #}
+            {% for comment in target_article.comment.all %}
+
+                <div class="comment_box">
+                  <div class="d-flex justify-content-between">
+                    <span style="font-size:1.3rem;" class="NNS_B" >{{ comment.writer.profile.nickname }}</span>
+                    <span>{{ comment.create_at }}</span>
+                  </div>
+                  <div class="my-2">
+                    <p style="margin: 0">{{ comment.content }}</p>
+                  </div>
+                </div>
+
+            {% endfor %}
             {% include 'commentapp/create.html' %}
         </div>
     </div>
