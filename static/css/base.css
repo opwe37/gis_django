@@ -94,3 +94,9 @@ a + a {
     padding: 1rem;
     font-size: 1.1rem;
 }
+
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 13px;
+    }
+}

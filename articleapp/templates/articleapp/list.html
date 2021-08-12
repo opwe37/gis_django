@@ -23,9 +23,10 @@
           box-shadow: 0 0 1rem darkgray;
         }
 
-        .container div a, img {
+        .container div img {
             width: 100%;
-            border-radius: 1rem;
+            border-top-right-radius: 1rem;
+            border-top-left-radius: 1rem;
         }
     </style>
 
@@ -44,7 +45,7 @@
 
     {% include 'snippets/pagination.html' %}
 
-    <div class="text-center my-5">
+    <div class="text-center my-3">
         <a href="{% url 'articleapp:create' %}" class="btn btn-dark rounded-pill material-icons">brush</a>
         <a href="{% url 'articleapp:create' %}" class="btn btn-outline-dark rounded-pill px-5">Create Article</a>
     </div>
