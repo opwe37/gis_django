@@ -6,7 +6,10 @@
         <span>
             <a href="{% url 'articleapp:list' %}">Articles</a>
         </span>
-        <span>nav_2</span>
+
+        <span>
+            <a href="{% url 'projectapp:list' %}">Articles</a>
+        </span>
 
         {% if not user.is_authenticated %}
         <span><a class="click" href="{% url 'accountapp:login' %}">Login</a></span>
