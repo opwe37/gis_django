@@ -100,3 +100,7 @@ a + a {
         font-size: 13px;
     }
 }
+
+.menu span+span {
+    margin-left: .5rem;
+}
