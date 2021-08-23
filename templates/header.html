@@ -15,6 +15,9 @@
         <span><a class="click" href="{% url 'accountapp:login' %}">Login</a></span>
         <span><a class="click" href="{% url 'accountapp:create' %}">SignUp</a></span>
         {% else %}
+        <span>
+            <a href="{% url 'subscribeapp:list' %}">Subscription</a>
+        </span>
         <span><a class="click" href="{% url 'accountapp:detail' pk=user.id %}">MyPage</a></span>
         <span><a class="click" href="{% url 'accountapp:logout' %}">Logout</a></span>
         {% endif %}
