@@ -34,6 +34,12 @@ class ArticleDetailView(DetailView, FormMixin):
     context_object_name = 'target_article'
     template_name = 'articleapp/detail.html'
 
+    def get_context_data(self, **kwargs):
+        liked = False
+        if self.request.user.is_authenticated:
+            liked = self.request.user.like_record.filter(article=self.object.pk).exists()
+        return super().get_context_data(liked=liked, **kwargs)
+
 
 required = [login_required, article_ownership_required]
 
