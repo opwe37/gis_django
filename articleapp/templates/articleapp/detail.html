@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="article-content m-2">
-                {{ target_article.content }}
+                {{ target_article.content | safe }}
             </div>
 
             {% if user == target_article.writer %}
