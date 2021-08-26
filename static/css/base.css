@@ -32,14 +32,6 @@ li {
     margin: 1rem 1.5rem;
 }
 
-.click {
-    cursor: pointer;
-    color: black;
-}
-.click:hover {
-    color: black;
-}
-
 .thumbnail_img_large {
     width: 12rem;
     height: 12rem;
@@ -68,6 +60,11 @@ li {
 
 .round-button:hover{
     color: dimgray;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 a + a {
